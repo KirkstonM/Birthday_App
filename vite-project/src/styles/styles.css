@@ -1,0 +1,100 @@
+:root {
+    --base-colour: #000;
+    --move-colour: #fff;
+  }
+  
+  /* .App {
+    font-family: sans-serif;
+    text-align: center;
+    background-color: #222;
+    height: 100vh;
+  } */
+
+  /* ======ANIMATED HOME BUTTON=============*/
+  .button--toggle {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    clip-path: inset(0px, 0px, 0px, 0px);
+    outline: none;
+    padding: 3px;
+    overflow: hidden;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #000;
+  }
+
+  .button--toggled .animating {
+    background-size: 100% 100%;
+    background: linear-gradient(
+      0deg,
+      #5ddcff 40%,
+      #3c67e3 50%,
+      #4e00c2 60%
+    );
+    animation: rotation 1s linear infinite;
+  }
+  .button--toggled .innerAnimating {
+    height: 150%;
+    width: 50%;
+    background: var(--base-colour);
+  }
+  
+  .button--text {
+    opacity: 1;
+    z-index: 1;
+    position: relative;
+    display: flex;
+    padding: 15px;
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .animating {
+    border-radius: 5px;
+    z-index: 0;
+    height: 5%;
+    width: 3%;
+    display: flex;
+    align-items: center;
+    position: absolute;
+  }
+  
+  .moving {
+    z-index: 0;
+    height: 400px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    background-size: 400% 400%;
+    background: linear-gradient(
+      0deg,
+      var(--base-colour) 40%,
+      var(--move-colour) 50%,
+      var(--base-colour) 60%
+    );
+    animation: rotation 0.5s ease-in-out infinite;
+  }
+  
+  .inner {
+    height: 190px;
+    width: 190px;
+    background: white;
+    transform: none;
+    position: relative;
+  }
+  
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /*========MAIN BUTTONS==========*/
